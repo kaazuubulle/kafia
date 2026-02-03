@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Mind Map</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Professional Navigation -->
+    <nav>
+        <div class="logo">MindMap Pro</div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#mapSection">Services</a></li>
+            <li><a href="#help">Help</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- HOME SCREEN -->
+    <section class="home" id="home">
+        <div class="home-content">
+            <h1>Unlock Your Creativity</h1>
+            <p>Visualise your ideas with our Interactive Mind Map.</p>
+            <button onclick="scrollToSection('mapSection')">Start Creating Now</button>
+        </div>
+    </section>
+
+    <!-- MIND MAP APPLICATION (Services) -->
+    <section class="section map-section" id="mapSection">
+        <div class="section-header">
+            <h2>Mind Map Workspace</h2>
+            <p>Double click to edit, Drag to move, Right click to delete.</p>
+        </div>
+
+        <div class="toolbar">
+            <form id="nodeForm">
+                <input type="text" id="nodeText" placeholder="Enter new idea..." required>
+                <button type="submit"><i class="fas fa-plus"></i> Add Node</button>
+            </form>
+
+            <div class="controls">
+                <button id="saveBtn"><i class="fas fa-save"></i> Save</button>
+                <button id="exportBtn"><i class="fas fa-file-export"></i> Export JSON</button>
+                <button id="clearBtn" class="danger"><i class="fas fa-trash"></i> Clear</button>
+            </div>
+        </div>
+
+        <div id="mapArea">
+            <!-- SVG Layer for Lines -->
+            <svg id="connections" width="100%" height="100%"></svg>
+            <!-- Nodes will be added here -->
+        </div>
+    </section>
+
+    <!-- HELP SECTION -->
+    <section class="section" id="help">
+        <div class="container">
+            <h2><i class="fas fa-question-circle"></i> How to Use</h2>
+            <div class="help-grid">
+                <div class="help-card">
+                    <i class="fas fa-plus-circle"></i>
+                    <h3>Add Node</h3>
+                    <p>Type your idea in the box and click 'Add Node' to create a new bubble.</p>
+                </div>
+                <div class="help-card">
+                    <i class="fas fa-project-diagram"></i>
+                    <h3>Connect</h3>
+                    <p>Click a node to select it (it turns green), then add a new node to link them automatically.</p>
+                </div>
+                <div class="help-card">
+                    <i class="fas fa-arrows-alt"></i>
+                    <h3>Move</h3>
+                    <p>Drag and drop nodes anywhere on the canvas to organize your thoughts.</p>
+                </div>
+                <div class="help-card">
+                    <i class="fas fa-eraser"></i>
+                    <h3>Edit/Delete</h3>
+                    <p>Double-click to text edit. Right-click to delete a node.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT US -->
+    <section class="section alt-bg" id="about">
+        <div class="container">
+            <h2><i class="fas fa-info-circle"></i> About Us</h2>
+            <div class="profile-card">
+                <div class="profile-info">
+                    <h3>Developed by Kaafia</h3>
+                    <p><strong>Class:</strong> CM241</p>
+                    <p><strong>ID:</strong> C5240073</p>
+                     <p><strong>phone:</strong>0614397446 </p>
+                    <p>This project demonstrates advanced JavaScript skills including DOM manipulation, SVGs, and
+                        LocalStorage data persistence.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT US -->
+    <section class="section" id="contact">
+        <div class="container">
+            <h2><i class="fas fa-envelope"></i> Contact Us</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <input type="text" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2026 Interactive Mind Map Project | CM241</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
